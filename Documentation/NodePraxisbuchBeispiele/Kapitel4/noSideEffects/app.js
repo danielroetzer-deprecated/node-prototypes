@@ -1,0 +1,2 @@
+require('./myModule')();
+require('./myModule')();

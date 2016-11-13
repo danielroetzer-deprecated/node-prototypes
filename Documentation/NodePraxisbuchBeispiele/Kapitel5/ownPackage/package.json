@@ -1,0 +1,13 @@
+{
+  "name": "example",
+  "version": "0.0.1",
+  "description": "Just another example application",
+  "main": "index.js",
+  "bin": "bin/app",
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "devDependencies": {},
+  "author": "Sebastian Springer <info@sebastian-springer.com>",
+  "license": "ISC"
+}

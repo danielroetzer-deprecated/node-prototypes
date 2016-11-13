@@ -1,0 +1,28 @@
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Year</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="movie in listController.movies">
+            <td>{{movie.title}}</td>
+            <td>{{movie.year}}</td>
+            <td>
+                <a ui-sref="form({id: movie.id})">
+                    Edit
+                </a>
+            </td>
+            <td>
+                <a ui-sref="delete({id: movie.id})">
+                    Delete
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<a ui-sref="form()">New</a>
