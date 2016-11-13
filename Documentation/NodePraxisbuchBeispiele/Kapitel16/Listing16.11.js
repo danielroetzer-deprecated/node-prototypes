@@ -1,0 +1,4 @@
+var fs = require('fs');
+fs.stat('/usr/local/bin/node', function (err, stat) {
+    console.log('Size of the file "/usr/local/bin/node" is ' + stat.size + ' Bytes');
+});
