@@ -9,7 +9,8 @@ module.exports = {
         authKey: '',
         db: 'rethinkdb_ex'
     },
-    express: {
+    server: {
+        host: "localhost",
         port: 3000
     }
 };
