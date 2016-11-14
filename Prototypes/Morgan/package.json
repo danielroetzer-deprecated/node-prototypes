@@ -1,7 +1,7 @@
 {
-  "name": "modules",
+  "name": "morgan",
   "version": "1.0.0",
-  "description": "importing different predefined and selfmade modules",
+  "description": "Morgan logging",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +9,7 @@
   "author": "DR",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+	"morgan": "^1.7.0"
   }
 }
