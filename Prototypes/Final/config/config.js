@@ -2,6 +2,7 @@
  * Created by Dani on 15.11.2016.
  */
 
+//Export project wide relevant information
 module.exports = {
     rethinkdb: {
         host: 'localhost',

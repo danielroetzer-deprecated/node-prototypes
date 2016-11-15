@@ -1,18 +1,16 @@
 /**
  * Created by Dani on 15.11.2016.
  */
-
-//Load config
-var config = require('../config/config');
+const config = require('../config/config');
 
 //Load the async module
-var async = require('async');
+const async = require('async');
 
 //Load the rethinkdb module
-var r = require('rethinkdb');
+const r = require('rethinkdb');
 
 //Variable for connection data to the database
-var connection = null;
+let connection = null;
 
 
 //Exporting the database query functions
