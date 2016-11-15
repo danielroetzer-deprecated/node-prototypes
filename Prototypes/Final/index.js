@@ -29,13 +29,11 @@ app.use(morgan('combined', {stream:accessLogStream}));
 
 
 
-
 //Load Database file and load the first setup
 //======================================================
 const db = require('./models/db.js');
 
 db.initDB();
-
 
 
 //Load pug
@@ -46,7 +44,6 @@ app.set('view engine', 'pug');
 //Load the router
 //======================================================
 require('./router')(app);
-
 
 
 //Listener
