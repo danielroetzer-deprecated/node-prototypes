@@ -1,0 +1,15 @@
+//
+   Created by Dani on 15.11.2016.
+
+html
+    head
+        title!= title
+    body
+        form(method='POST' action='/store')
+            div.form-group
+                label(for='name') Name:
+                input#name.form-control(type='text', placeholder='firstname' name='name')
+            div.form-group
+                label(for='age') Age:
+                input#age.form-control(type='text', placeholder='0-999' name='age')
+            button.btn.btn-primary(type='submit') Save
