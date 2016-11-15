@@ -2,12 +2,12 @@
  * Created by Rötzer on 14.11.2016.
  */
 
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
 
 //Load config
-var config = require('./config/config');
+const config = require('./config/config');
 
 //Load pug
 app.set('view engine', 'pug');

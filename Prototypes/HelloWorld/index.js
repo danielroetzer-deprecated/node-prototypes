@@ -6,12 +6,13 @@
 */
 
 //Calling express
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
-//Create server and display Hello World when called
+
 //reg = request, res = response
 app.get('/', function (req, res) {
+    //Display Hello World
 	res.send('Hello World!')
 });
 
@@ -21,7 +22,7 @@ app.get('/secret', function (req, res) {
 });
 
 //Setting server to listen to localhost:3000
-//localhost or 127.0.0.1 is default
+//localhost = 127.0.0.1 is default
 app.listen(3000, function () {
 	//This text is displayed, when the server has been successfully started
 	console.log('Hello World Server listening on localhost:3000!')

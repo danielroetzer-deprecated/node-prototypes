@@ -1,10 +1,10 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
-var morgan = require('morgan');
-var fs = require('fs');
+const morgan = require('morgan');
+const fs = require('fs');
 
-var accessLogStream = fs.createWriteStream(__dirname + '/access.log', {flags: 'a'});
+const accessLogStream = fs.createWriteStream(__dirname + '/access.log', {flags: 'a'});
 
 app.use(morgan('combined', {stream:accessLogStream}));
 
