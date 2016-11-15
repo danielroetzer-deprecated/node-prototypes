@@ -17,7 +17,8 @@ var connection = null;
 
 //Exporting the database query functions
 module.exports = {
-    initDB
+    initDB,
+    insertTestData
 };
 
 //Initialize DB -> Called one time on server start
@@ -27,7 +28,10 @@ function initDB(){
     async.waterfall([
         function (callback) {
             r.connect(config.rethinkdb, function (err, conn) {
-                if (err) throw err;
+                if (err){
+                    console.log('Failed to connect to the database');
+                    //throw err;
+                }
                 connection = conn;
                 callback(null,connection);
             });
@@ -59,6 +63,35 @@ function initDB(){
         else console.log(status);
     });
 }
+
+function insertTestData(){
+    async.waterfall([
+        function (callback) {
+            r.connect(config.rethinkdb, function (err, conn) {
+                if (err){
+                    console.log('Failed to connect to the database');
+                    //throw err;
+                }
+                connection = conn;
+                callback(null,connection);
+            });
+        },function (connection, callback) {
+            r.db('rethinkdb_prototype').table('protoTable').insert({
+                name: 'Daniel',
+                alter: 20
+            }).run(connection, function(err, result) {
+                if (err) throw err;
+                console.log(JSON.stringify(result, null, 2));
+            });
+            callback(null, '++ test data successfully added')
+        }
+    ],function (err, status) {
+        if (err) throw err;
+        else console.log(status);
+    });
+}
+
+
 
 
 

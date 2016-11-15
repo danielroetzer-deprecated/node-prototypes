@@ -15,8 +15,7 @@ var config = require('./config/config.js');
 var db = require('./models/db.js');
 
 db.initDB();
-
-
+db.insertTestData();
 
 app.get('/',function (req, res) {
     res.send('Main page');
