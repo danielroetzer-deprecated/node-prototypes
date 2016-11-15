@@ -8,19 +8,24 @@ module.exports = {
     indexAction,
     storeAction
 };
+
+//Call index page
 function indexAction (req, res) {
     res.render('index', {
         title: 'Pug is great!'
     });
 }
+
+//Retrieve the submitted data and store them into the database
 function storeAction (req, res) {
-    var name = req.body.name;
-    var age = req.body.age;
+    //Get data
+    const name = req.body.name;
+    const age = req.body.age;
 
-    console.log(name + '\n' + age);
-
+    //Store data
     db.insertData(name,age);
 
+    //Show results
     res.render('store', {
         title: 'Pug is great!',
         name: name,
