@@ -263,3 +263,38 @@
 2016-11-15T20:22:41.184312400 1160.842857s notice: All client connections closed.
 2016-11-15T20:22:41.184312401 1160.842863s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
 2016-11-15T20:22:41.209377500 1160.867896s notice: Storage engine shut down.
+2016-11-16T00:08:55.475706100 0.012604s notice: Running rethinkdb 2.3.5-windows (MSC 190023506)...
+2016-11-16T00:08:55.475706101 0.012737s notice: Running on 6.2.9200 (Windows 8, Server 2012)
+2016-11-16T00:08:55.475706102 0.012773s notice: Loading data from directory C:\\Users\\R?tzer\\Documents\\GitHub\\RVP-Repository\\RethinkDB\\rethinkdb_data
+2016-11-16T00:08:55.567455400 0.104447s info: Automatically using cache size of 1421 MB
+2016-11-16T00:08:55.569456700 0.106430s notice: Listening for intracluster connections on port 29015
+2016-11-16T00:08:55.612367700 0.149145s notice: Listening for client driver connections on port 28015
+2016-11-16T00:08:55.612367701 0.149362s notice: Listening for administrative HTTP connections on port 8080
+2016-11-16T00:08:55.612367702 0.149364s notice: Listening on cluster address: 127.0.0.1
+2016-11-16T00:08:55.612367703 0.149366s notice: Listening on driver address: 127.0.0.1
+2016-11-16T00:08:55.612367704 0.149367s notice: Listening on http address: 127.0.0.1
+2016-11-16T00:08:55.612367705 0.149367s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2016-11-16T00:08:55.612367706 0.149368s notice: Server ready, "HOME_ykq" fd8dcbeb-59d7-448d-85c8-ee793fdd0822
+2016-11-16T00:08:56.637265400 1.174026s info: Table 857f6c4e-110c-4401-b5a8-e44eeca728de: Starting a new Raft election for term 4.
+2016-11-16T00:08:56.708362500 1.245131s info: Table c091771d-f5b8-479f-9e5b-bf201810ef75: Starting a new Raft election for term 12.
+2016-11-16T00:08:56.731501800 1.268501s info: Table 857f6c4e-110c-4401-b5a8-e44eeca728de: This server is Raft leader for term 4. Latest log index is 11.
+2016-11-16T00:08:56.809414600 1.346330s info: Table c091771d-f5b8-479f-9e5b-bf201810ef75: This server is Raft leader for term 12. Latest log index is 37.
+2016-11-16T00:08:56.930042100 1.466838s info: Table 6dd0149b-86af-485c-bff3-a48a3a12d169: Starting a new Raft election for term 8.
+2016-11-16T00:08:57.009328400 1.546105s info: Table 6dd0149b-86af-485c-bff3-a48a3a12d169: This server is Raft leader for term 8. Latest log index is 21.
+2016-11-16T00:08:57.382423700 1.919223s info: Table 430212e4-022c-4c02-97d6-899754b1b4f5: Starting a new Raft election for term 8.
+2016-11-16T00:08:57.663917300 2.200923s info: Table 430212e4-022c-4c02-97d6-899754b1b4f5: This server is Raft leader for term 8. Latest log index is 25.
+2016-11-16T00:48:43.847560000 2388.384409s notice: Removing file C:\\Users\\R?tzer\\Documents\\GitHub\\RVP-Repository\\RethinkDB\\rethinkdb_data\\430212e4-022c-4c02-97d6-899754b1b4f5
+2016-11-16T00:48:43.847560001 2388.384418s info: Table 430212e4-022c-4c02-97d6-899754b1b4f5: Deleted the table.
+2016-11-16T00:48:49.342278300 2393.879037s info: Table eefaa2fc-b71b-4f1a-b19c-9018ab376bf3: Starting a new Raft election for term 1.
+2016-11-16T00:48:49.342278301 2393.879328s info: Table eefaa2fc-b71b-4f1a-b19c-9018ab376bf3: Added replica on this server.
+2016-11-16T00:48:49.408321700 2393.945311s info: Table eefaa2fc-b71b-4f1a-b19c-9018ab376bf3: This server is Raft leader for term 1. Latest log index is 0.
+2016-11-16T00:53:06.994084500 2651.530806s notice: Removing file C:\\Users\\R?tzer\\Documents\\GitHub\\RVP-Repository\\RethinkDB\\rethinkdb_data\\eefaa2fc-b71b-4f1a-b19c-9018ab376bf3
+2016-11-16T00:53:06.994084501 2651.530814s info: Table eefaa2fc-b71b-4f1a-b19c-9018ab376bf3: Deleted the table.
+2016-11-16T00:53:24.877791200 2669.414677s info: Table ab549568-4c66-492c-956d-3c78381cc343: Starting a new Raft election for term 1.
+2016-11-16T00:53:24.878293200 2669.414962s info: Table ab549568-4c66-492c-956d-3c78381cc343: Added replica on this server.
+2016-11-16T00:53:24.947046500 2669.483951s info: Table ab549568-4c66-492c-956d-3c78381cc343: This server is Raft leader for term 1. Latest log index is 0.
+2016-11-16T01:00:48.494362100 3113.031108s notice: Server got Control-C; shutting down...
+2016-11-16T01:00:48.494362101 3113.031254s notice: Shutting down client connections...
+2016-11-16T01:00:48.494362102 3113.031579s notice: All client connections closed.
+2016-11-16T01:00:48.494362103 3113.031583s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2016-11-16T01:00:48.502366900 3113.039292s notice: Storage engine shut down.
