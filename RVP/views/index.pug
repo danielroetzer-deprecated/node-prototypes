@@ -1,0 +1,19 @@
+//
+   Created by Rötzer on 16.11.2016.
+
+doctype 5
+html
+    head
+        title!= title
+        link(href='foundation/css/foundation.min.css', rel='stylesheet', type='text/css')
+    body
+        nav.top-bar(data-topbar, role='navigation')
+            ul.title-area
+                li.name
+                    h1
+                        a(href='#') My Site
+                // Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone
+                li.toggle-topbar.menu-icon
+                    a(href='#')
+                        span Menu
+
