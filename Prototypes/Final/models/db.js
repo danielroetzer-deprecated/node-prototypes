@@ -9,9 +9,6 @@ const async = require('async');
 //Load the rethinkdb module
 const r = require('rethinkdb');
 
-//Variable for connection data to the database
-let connection = null;
-
 
 //Exporting the database query functions
 module.exports = {
@@ -28,10 +25,8 @@ function initDB(){
             r.connect(config.rethinkdb, function (err, conn) {
                 if (err){
                     console.log('Failed to connect to the database');
-                    //throw err;
                 }
-                connection = conn;
-                callback(null,connection);
+                callback(null,conn);
             });
         },function (connection, callback) {
             r.dbCreate('finalPrototype').run(connection, function(err, result){
@@ -70,8 +65,7 @@ function insertData(name,age){
                     console.log('Failed to connect to the database');
                     //throw err;
                 }
-                connection = conn;
-                callback(null,connection);
+                callback(null,conn);
             });
         },function (connection, callback) {
             r.db('finalPrototype').table('finalTable').insert({
@@ -83,8 +77,10 @@ function insertData(name,age){
             });
             callback(null, '++ Data successfully added ++')
         }
+
     ],function (err, status) {
         if (err) throw err;
         else console.log(status);
     });
 }
+
