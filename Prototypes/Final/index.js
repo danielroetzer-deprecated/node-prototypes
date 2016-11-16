@@ -15,6 +15,7 @@ const config = require('./config/config.js');
 //Load and initialize the body parser module
 //======================================================
 const bodyParser = require('body-parser');
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 
