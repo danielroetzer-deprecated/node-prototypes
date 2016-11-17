@@ -5,19 +5,26 @@
 //const db = require('../models/db');
 module.exports = {
     indexAction,
-    sendCSS
+    aboutAction,
+    placeholderAction
 };
 
 //Call index page
 function indexAction (req, res) {
     res.render('index', {
-        title: 'RVP Main Page'
+        title: 'Home - RVP'
     });
 }
 
-function sendCSS (req, res) {
-    res.render('views/foundation/css/foundation.css', {
-        //title: 'RVP Main Page'
+function aboutAction (req, res) {
+    res.render('about', {
+        title: 'About Us - RVP'
+    });
+}
+
+function placeholderAction(req, res){
+    res.render('placeholder', {
+        title: 'Placeholder - RVP'
     });
 }
 
