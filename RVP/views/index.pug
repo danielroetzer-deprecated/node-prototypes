@@ -1,24 +1,19 @@
-//
-   Created by Rötzer on 16.11.2016.
+extends templates/layout
 
-doctype 5
-html
-    head
-        title!= title
-        link(href='bootstrap/css/bootstrap.min.css', rel='stylesheet', type='text/css')
-        link(href='bootstrap/css/bootstrap-grid.min.css', rel='stylesheet', type='text/css')
-        meta(name="viewport", content="width=device-width", initial-scale='1', shrink-to-fit='no')
-    body
-        nav.navbar.navbar-dark.bg-inverse
-            a.navbar-brand(href='#') RVP
-            ul.nav.navbar-nav.float-xs-right
-                li.nav-item
-                    a.nav-link.active(href='/') Home
-                li.nav-item
-                    a.nav-link(href='/about') About Us
-                li.nav-item
-                    a.nav-link(href='/placeholder') Placeholder
+block content
+    nav.navbar.navbar-fixed-top.navbar-full.navbar-dark.bg-inverse
+        a.navbar-brand(href='/') RVP
+        ul.nav.navbar-nav.float-xs-right
+            li.nav-item
+                a.nav-link.active(href='/') Home
+            li.nav-item
+                a.nav-link(href='/about') About Us
+            li.nav-item
+                a.nav-link(href='/placeholder') Placeholder
 
-        div.container
-            h1 Home
+    br
+    br
+
+    div.container
+        h1 Home
 

@@ -27,7 +27,8 @@ app.set('view engine', 'pug');
 require('./routes/routes')(app);
 
 
-// catch 404 and forward to error handler
+
+//catch 404 and forward to error handler
 //======================================================
 app.use(function(req, res, next) {
     const err = new Error('Not Found');
@@ -35,7 +36,8 @@ app.use(function(req, res, next) {
     next(err);
 });
 
-// error handler
+//error handler, displays error messages in the browser
+//only keep this activated in development
 //======================================================
 app.use(function(err, req, res, next) {
     // set locals, only providing error in development
