@@ -11,6 +11,10 @@ block content
             li.nav-item
                 a.nav-link(href='/placeholder') Placeholder
 
-    h3= message
-    h4= error.status
-    pre #{error.stack}
+    .alert.alert-danger(role='alert')
+        p.
+            #{message}
+            #{error.status}
+
+    .alert.alert-warning(role='alert')
+        pre #{error.stack}
