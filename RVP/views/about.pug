@@ -1,0 +1,15 @@
+extends templates/layout
+
+block content
+    nav.navbar.navbar-dark.bg-inverse
+        a.navbar-brand(href='#') RVP
+        ul.nav.navbar-nav.float-xs-right
+            li.nav-item
+                a.nav-link(href='/') Home
+            li.nav-item
+                a.nav-link.active(href='/about') About Us
+            li.nav-item
+                a.nav-link(href='/placeholder') Placeholder
+
+    div.container
+        h1 About Us
