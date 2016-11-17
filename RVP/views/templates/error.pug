@@ -1,6 +1,20 @@
 extends layout
 
 block content
-    h3= message
-    h4= error.status
-    pre #{error.stack}
+    nav.navbar.navbar-fixed-top.navbar-full.navbar-dark.bg-inverse
+        a.navbar-brand(href='/') RVP
+        ul.nav.navbar-nav.float-xs-right
+            li.nav-item
+                a.nav-link(href='/') Home
+            li.nav-item
+                a.nav-link(href='/about') About Us
+            li.nav-item
+                a.nav-link(href='/placeholder') Placeholder
+
+    .alert.alert-danger(role='alert')
+        p.
+            #{message}
+            #{error.status}
+
+    .alert.alert-warning(role='alert')
+        pre #{error.stack}

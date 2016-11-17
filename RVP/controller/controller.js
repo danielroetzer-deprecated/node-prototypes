@@ -11,9 +11,8 @@ module.exports = {
 
 //Call index page
 function indexAction (req, res) {
-    res.render('index', {
-        title: 'Home - RVP'
-    });
+    res.locals.title = 'Home - RVP';
+    res.render('index');
 }
 
 function aboutAction (req, res) {
