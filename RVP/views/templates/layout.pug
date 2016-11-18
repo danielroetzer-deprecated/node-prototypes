@@ -9,13 +9,21 @@ html
 
         //load css files
         link(href='bootstrap/css/bootstrap.min.css', rel='stylesheet', type='text/css')
+        link(href='css/rvp.css', rel='stylesheet', type='text/css')
 
         //responsive meta tag
         meta(name="viewport", content="width=device-width", initial-scale='1', shrink-to-fit='no')
 
     body
-        br
-        br
+        nav.navbar.navbar-fixed-top.navbar-full.navbar-dark.bg-inverse
+            a.navbar-brand(href='/') RVP
+            ul.nav.navbar-nav.float-xs-right
+                li.nav-item
+                    a.nav-link(href='/' , class=active_home) Home
+                li.nav-item
+                    a.nav-link(href='/about', class=active_about) About Us
+                li.nav-item
+                    a.nav-link(href='/create' , class=active_create) Create Poll
         br
         br
         block content

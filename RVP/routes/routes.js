@@ -3,11 +3,11 @@
  */
 
 
-var controller = require('../controller/controller');
+const controller = require('../controller/controller');
 
 //Defining routes and which function they execute from the controller
 module.exports = function (app) {
     app.get('/', controller.indexAction);
     app.get('/about', controller.aboutAction);
-    app.get('/placeholder', controller.placeholderAction);
+    app.get('/create', controller.createAction);
 };

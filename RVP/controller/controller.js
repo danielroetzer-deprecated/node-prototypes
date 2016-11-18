@@ -6,24 +6,38 @@
 module.exports = {
     indexAction,
     aboutAction,
-    placeholderAction
+    createAction
 };
 
 //Call index page
 function indexAction (req, res) {
+    //set the page title
     res.locals.title = 'Home - RVP';
+
+    //set the active tab for the navigation bar
+    res.locals.active_home = 'active';
+    res.locals.active_about = '';
+    res.locals.active_create = '';
+
+    //render and deliver the index.pug file
     res.render('index');
 }
 
 function aboutAction (req, res) {
-    res.render('about', {
-        title: 'About Us - RVP'
-    });
+    res.locals.title = 'About Us - RVP';
+    res.locals.active_home = '';
+    res.locals.active_about = 'active';
+    res.locals.active_create = '';
+
+    res.render('about');
 }
 
-function placeholderAction(req, res){
-    res.render('placeholder', {
-        title: 'Placeholder - RVP'
-    });
+function createAction(req, res){
+    res.locals.title = 'Create Poll - RVP';
+    res.locals.active_home = '';
+    res.locals.active_about = '';
+    res.locals.active_create = 'active';
+
+    res.render('create');
 }
 
