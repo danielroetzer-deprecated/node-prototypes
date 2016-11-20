@@ -6,7 +6,8 @@
 module.exports = {
     indexAction,
     aboutAction,
-    createAction
+    createAction,
+    availableAction
 };
 
 //Call index page
@@ -18,6 +19,7 @@ function indexAction (req, res) {
     res.locals.active_home = 'active';
     res.locals.active_about = '';
     res.locals.active_create = '';
+    res.locals.active_available = '';
 
     //render and deliver the index.pug file
     res.render('index');
@@ -28,6 +30,7 @@ function aboutAction (req, res) {
     res.locals.active_home = '';
     res.locals.active_about = 'active';
     res.locals.active_create = '';
+    res.locals.active_available = '';
 
     res.render('about');
 }
@@ -37,7 +40,18 @@ function createAction(req, res){
     res.locals.active_home = '';
     res.locals.active_about = '';
     res.locals.active_create = 'active';
+    res.locals.active_available = '';
 
     res.render('create');
+}
+
+function availableAction(req, res){
+    res.locals.title = 'Available Polls - RVP';
+    res.locals.active_home = '';
+    res.locals.active_about = '';
+    res.locals.active_create = '';
+    res.locals.active_available = 'active';
+
+    res.render('available');
 }
 

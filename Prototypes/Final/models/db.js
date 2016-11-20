@@ -70,7 +70,7 @@ function insertData(name,age){
         },function (connection, callback) {
             r.db('finalPrototype').table('finalTable').insert({
                 name: name,
-                alter: age
+                age: age
             }).run(connection, function(err, result) {
                 if (err) throw err;
                 console.log(JSON.stringify(result, null, 2));

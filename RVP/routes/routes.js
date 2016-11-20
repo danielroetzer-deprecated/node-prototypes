@@ -10,4 +10,6 @@ module.exports = function (app) {
     app.get('/', controller.indexAction);
     app.get('/about', controller.aboutAction);
     app.get('/create', controller.createAction);
+    //app.post('/create', controller.createAction);
+    app.get('/available', controller.availableAction);
 };

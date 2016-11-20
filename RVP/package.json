@@ -14,7 +14,8 @@
     "Node.js",
     "Express",
     "Real-Time",
-    "Pug"
+    "Pug",
+    "RethinkDB"
   ],
   "author": "Daniel Roetzer",
   "license": "ISC",
@@ -23,7 +24,9 @@
   },
   "homepage": "https://github.com/danielroetzer/RVP-Repository#readme",
   "dependencies": {
+    "async": "^2.1.2",
     "express": "^4.14.0",
-    "pug": "^2.0.0-beta6"
+    "pug": "^2.0.0-beta6",
+    "rethinkdb": "^2.3.3"
   }
 }
