@@ -28,6 +28,14 @@ require('./routes/routes')(app);
 
 
 
+//Load Database file and load the first setup
+//======================================================
+const db = require('./models/db.js');
+
+db.initDB();
+
+
+
 //catch 404 and forward to error handler
 //======================================================
 app.use(function(req, res, next) {
