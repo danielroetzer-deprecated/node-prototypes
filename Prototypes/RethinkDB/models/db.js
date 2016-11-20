@@ -78,7 +78,7 @@ function insertTestData(){
         },function (connection, callback) {
             r.db('rethinkdb_prototype').table('protoTable').insert({
                 name: 'Daniel',
-                alter: 20
+                age: 20,
             }).run(connection, function(err, result) {
                 if (err) throw err;
                 console.log(JSON.stringify(result, null, 2));
