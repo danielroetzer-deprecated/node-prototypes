@@ -2,37 +2,58 @@
  * Created by Rötzer on 16.11.2016.
  */
 
-//Load and initialize express
+//Load the defined logger from the configs
 //======================================================
-const express = require('express');
-const app = express();
-
+const logger = require('./config/winston');
 
 //Load config
 //======================================================
 const config = require('./config/config.js');
 
 
+
+//Load and initialize express
+//======================================================
+const express = require('express');
+const app = express();
+logger.log('info','configuring express...');
+
+
+//Load morgan an initialize it
+//======================================================
+const morgan = require('morgan');
+const fs = require('fs');
+
+const accessLogStream = fs.createWriteStream(__dirname + '/logs/access-logs.log', {flags: 'a'});
+app.use(morgan('combined', {stream:accessLogStream}));
+
+logger.log('verbose','http logger loaded');
+
+
 //Set the static files like css public
 app.use(express.static(__dirname + '/public'));
+logger.log('verbose','public directory set');
 
 
 //Load pug
 //======================================================
 app.set('view engine', 'pug');
+logger.log('verbose','view engine set to pug');
 
 
 //Load the router
 //======================================================
 require('./routes/routes')(app);
+logger.log('verbose','routing paths set');
 
 
 
-//Load Database file and load the first setup
+//Listener
 //======================================================
-const db = require('./models/db.js');
-
-db.initDB();
+app.listen(config.server.port, function () {
+    logger.log('info','express configured');
+    logger.log('info','listening on port: ' + config.server.port);
+});
 
 
 
@@ -59,8 +80,9 @@ app.use(function(err, req, res, next) {
 
 
 
-//Listener
+//Load Database file and load the first setup
 //======================================================
-app.listen(config.server.port, function () {
-    console.log('Listening on port: ' + config.server.port)
-});
+const db = require('./models/db.js');
+
+logger.log('info','loading database setup...');
+db.initDB();
