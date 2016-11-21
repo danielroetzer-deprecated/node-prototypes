@@ -383,3 +383,36 @@
 2016-11-18T18:27:56.153889702 1843.777615s notice: All client connections closed.
 2016-11-18T18:27:56.153889703 1843.777621s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
 2016-11-18T18:27:56.204589100 1843.827844s notice: Storage engine shut down.
+2016-11-21T12:13:07.363562500 0.118475s notice: Running rethinkdb 2.3.5-windows (MSC 190023506)...
+2016-11-21T12:13:07.365563800 0.120596s notice: Running on 6.2.9200 (Windows 8, Server 2012)
+2016-11-21T12:13:07.367567700 0.122517s notice: Loading data from directory C:\\Users\\R?tzer\\Documents\\GitHub\\RVP-Repository\\RethinkDB\\rethinkdb_data
+2016-11-21T12:13:08.126750700 0.881505s info: Automatically using cache size of 1105 MB
+2016-11-21T12:13:08.366050500 1.120893s notice: Listening for intracluster connections on port 29015
+2016-11-21T12:13:09.739763300 2.494462s notice: Listening for client driver connections on port 28015
+2016-11-21T12:13:09.740264100 2.494991s notice: Listening for administrative HTTP connections on port 8080
+2016-11-21T12:13:09.740264101 2.494997s notice: Listening on cluster address: 127.0.0.1
+2016-11-21T12:13:09.740264102 2.494999s notice: Listening on driver address: 127.0.0.1
+2016-11-21T12:13:09.740264103 2.495028s notice: Listening on http address: 127.0.0.1
+2016-11-21T12:13:09.740264104 2.495030s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2016-11-21T12:13:09.740264105 2.495032s notice: Server ready, "HOME_ykq" fd8dcbeb-59d7-448d-85c8-ee793fdd0822
+2016-11-21T12:13:10.366189900 3.121171s info: Table 59d1f0aa-3e4b-41b5-aa19-6f48c441c26d: Starting a new Raft election for term 2.
+2016-11-21T12:13:10.369690900 3.124619s info: Table ab549568-4c66-492c-956d-3c78381cc343: Starting a new Raft election for term 5.
+2016-11-21T12:13:10.465953100 3.220898s info: Table 59d1f0aa-3e4b-41b5-aa19-6f48c441c26d: This server is Raft leader for term 2. Latest log index is 3.
+2016-11-21T12:13:10.554809000 3.309889s info: Table ab549568-4c66-492c-956d-3c78381cc343: This server is Raft leader for term 5. Latest log index is 14.
+2016-11-21T12:13:10.627526500 3.382532s info: Table 6dd0149b-86af-485c-bff3-a48a3a12d169: Starting a new Raft election for term 12.
+2016-11-21T12:13:10.725129200 3.480215s info: Table c091771d-f5b8-479f-9e5b-bf201810ef75: Starting a new Raft election for term 16.
+2016-11-21T12:13:10.829872600 3.584955s info: Table 6dd0149b-86af-485c-bff3-a48a3a12d169: This server is Raft leader for term 12. Latest log index is 35.
+2016-11-21T12:13:10.922309200 3.677036s info: Table 857f6c4e-110c-4401-b5a8-e44eeca728de: Starting a new Raft election for term 8.
+2016-11-21T12:13:10.922804400 3.677728s info: Table c091771d-f5b8-479f-9e5b-bf201810ef75: This server is Raft leader for term 16. Latest log index is 51.
+2016-11-21T12:13:11.076273700 3.831279s info: Table 857f6c4e-110c-4401-b5a8-e44eeca728de: This server is Raft leader for term 8. Latest log index is 27.
+2016-11-21T12:13:39.887592500 32.642467s warn: Problem when checking for new versions of RethinkDB: HTTP request to update.rethinkdb.com failed.
+2016-11-21T12:34:00.485929100 1253.240655s notice: Removing file C:\\Users\\R?tzer\\Documents\\GitHub\\RVP-Repository\\RethinkDB\\rethinkdb_data\\59d1f0aa-3e4b-41b5-aa19-6f48c441c26d
+2016-11-21T12:34:00.485929101 1253.240672s info: Table 59d1f0aa-3e4b-41b5-aa19-6f48c441c26d: Deleted the table.
+2016-11-21T12:34:13.191025400 1265.945765s info: Table 72b0d5cb-cf5d-4dde-8b39-8003401d87d2: Starting a new Raft election for term 1.
+2016-11-21T12:34:13.191526200 1265.946520s info: Table 72b0d5cb-cf5d-4dde-8b39-8003401d87d2: Added replica on this server.
+2016-11-21T12:34:13.279077000 1266.034153s info: Table 72b0d5cb-cf5d-4dde-8b39-8003401d87d2: This server is Raft leader for term 1. Latest log index is 0.
+2016-11-21T17:52:31.589043200 20364.393793s notice: Server got Control-C; shutting down...
+2016-11-21T17:52:31.613506500 20364.418150s notice: Shutting down client connections...
+2016-11-21T17:52:31.614505400 20364.419444s notice: All client connections closed.
+2016-11-21T17:52:31.614505401 20364.419462s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2016-11-21T17:52:31.733400100 20364.538119s notice: Storage engine shut down.
