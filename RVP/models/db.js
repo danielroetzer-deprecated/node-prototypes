@@ -1,6 +1,10 @@
 /**
  * Created by Dani on 15.11.2016.
  */
+
+//Load the defined logger from the configs
+const logger = require('../config/winston');
+
 const config = require('../config/config');
 
 //Load the async module
@@ -24,36 +28,37 @@ function initDB(){
         function (callback) {
             r.connect(config.rethinkdb, function (err, conn) {
                 if (err){
-                    console.log('Failed to connect to the database');
+                    logger.log('error','Failed to connect to the database \n' + err);
+                }else{
+                    logger.log('verbose','Database connection successful');
                 }
                 callback(null,conn);
             });
         },function (connection, callback) {
             r.dbCreate('rvp').run(connection, function(err, result){
                 if(err) {
-                    console.log("Database already created");
+                    logger.log('verbose','Database already created');
                 } else {
-                    console.log("Created new database: rvp");
+                    logger.log('verbose','Created new database: rvp');
                     console.log(JSON.stringify(result, null, 2));
                 }
-
                 callback(null, connection);
             });
         },function (connection, callback) {
             r.db('rvp').tableCreate('polls').run(connection, function(err, result) {
                 if (err) {
-                    console.log("Table already created");
+                    logger.log('verbose','Table already created');
                 }else{
-                    console.log("Created new table: polls");
+                    logger.log('verbose','Created new table: polls');
                     console.log(JSON.stringify(result, null, 2));
                 }
 
-                callback(null,'###### Database is ready ######');
+                callback(null,'Database is ready');
             });
         }
     ],function (err, status) {
-        if (err) throw err;
-        else console.log(status);
+        if (err) logger.log('error',err);
+        else logger.log('info',status);
     });
 }
 
