@@ -15,17 +15,19 @@ logger.debug('Logging level = debug'); //Priority 4
 logger.verbose('Logging level = verbose'); //Priority 3
 
 //Log caughtException
+/*
 try {
     const x=2;
     x=4;
 }catch (err){
     logger.error(err);
-}
+}*/
 
 logger.info('Logging level = info'); //Priority 2
 logger.warn('Logging level = warn'); //Priority 1
 logger.error('Logging level = error'); //Priority 0
 
 //Log uncaught Exception
+/*
 const y=2;
-y=4;
+y=4;*/

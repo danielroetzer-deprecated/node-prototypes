@@ -5443,3 +5443,7 @@
 {"level":"info","message":"Logging level = info","timestamp":"2016-11-21T09:07:53.245Z"}
 {"level":"warn","message":"Logging level = warn","timestamp":"2016-11-21T09:07:53.245Z"}
 {"level":"error","message":"Logging level = error","timestamp":"2016-11-21T09:07:53.245Z"}
+{"message":"Assignment to constant variable.","stack":"TypeError: Assignment to constant variable.\n    at Object.<anonymous> (C:\\Users\\Rötzer\\Documents\\GitHub\\RVP-Repository\\Prototypes\\Winston\\index.js:20:6)\n    at Module._compile (module.js:556:32)\n    at Object.Module._extensions..js (module.js:565:10)\n    at Module.load (module.js:473:32)\n    at tryModuleLoad (module.js:432:12)\n    at Function.Module._load (module.js:424:3)\n    at Module.runMain (module.js:590:10)\n    at run (bootstrap_node.js:394:7)\n    at startup (bootstrap_node.js:149:9)\n    at bootstrap_node.js:509:3","level":"error","timestamp":"2016-11-21T09:26:01.361Z"}
+{"level":"info","message":"Logging level = info","timestamp":"2016-11-21T09:26:01.365Z"}
+{"level":"warn","message":"Logging level = warn","timestamp":"2016-11-21T09:26:01.366Z"}
+{"level":"error","message":"Logging level = error","timestamp":"2016-11-21T09:26:01.366Z"}
