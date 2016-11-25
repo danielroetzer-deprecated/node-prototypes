@@ -26,32 +26,33 @@ function indexAction (req, res) {
 }
 
 function aboutAction (req, res) {
-    res.locals.title = 'About Us - RVP';
-    res.locals.active_home = '';
-    res.locals.active_about = 'active';
-    res.locals.active_create = '';
-    res.locals.active_available = '';
-
-    res.render('about');
+    //Or write it like this, same thing as above
+    res.render('about', {
+        title: 'About Us - RVP',
+        active_home: '',
+        active_about: 'active',
+        active_create: '',
+        active_available: ''
+    });
 }
 
 function createAction(req, res){
-    res.locals.title = 'Create Poll - RVP';
-    res.locals.active_home = '';
-    res.locals.active_about = '';
-    res.locals.active_create = 'active';
-    res.locals.active_available = '';
-
-    res.render('create');
+    res.render('create', {
+        title: 'Create Poll - RVP',
+        active_home: '',
+        active_about: '',
+        active_create: 'active',
+        active_available: ''
+    });
 }
 
 function availableAction(req, res){
-    res.locals.title = 'Available Polls - RVP';
-    res.locals.active_home = '';
-    res.locals.active_about = '';
-    res.locals.active_create = '';
-    res.locals.active_available = 'active';
-
-    res.render('available');
+    res.render('available', {
+        title: 'Available Polls - RVP',
+        active_home: '',
+        active_about: '',
+        active_create: '',
+        active_available: 'active'
+    });
 }
 

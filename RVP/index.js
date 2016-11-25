@@ -82,7 +82,7 @@ app.use(function(err, req, res, next) {
 
 //Load Database file and load the first setup
 //======================================================
-const db = require('./models/db.js');
+/*const db = require('./models/db.js');
 
 logger.log('info','loading database setup...');
-db.initDB();
+db.initDB();*/
