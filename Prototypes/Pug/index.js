@@ -12,6 +12,10 @@ const config = require('./config/config');
 //Load pug
 app.set('view engine', 'pug');
 
+//Load body-parser module and initialize it
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended: false}));
+
 
 //Render the index file and send some arguments
 app.get('/', function (req, res) {
@@ -19,6 +23,14 @@ app.get('/', function (req, res) {
         title: 'Pug is great!',
         message: 'Hello there! I am using pug'
     });
+});
+
+//Retrieve submitted value and send it back
+app.post('/',function (req,res) {
+    res.render('hello', {
+        title: 'Pug is great!',
+        userName: req.body.userName
+    })
 });
 
 app.listen(config.server.port, function () {

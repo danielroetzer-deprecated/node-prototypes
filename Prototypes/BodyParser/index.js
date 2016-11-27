@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(__dirname + '/views'));
 
 
-//
+//Retrieve submitted value and it back
 app.post('/',function (req,res) {
     //Get variable from the form
     const userName = req.body.userName;
