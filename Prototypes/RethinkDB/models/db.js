@@ -3,16 +3,14 @@
  */
 
 //Load config
-var config = require('../config/config');
+const config = require('../config/config');
 
 //Load the async module
-var async = require('async');
+const async = require('async');
 
-//Load the rethinkdb module
-var r = require('rethinkdb');
+//Load the RethinkDB module
+const r = require('rethinkdb');
 
-//Variable for connection data to the database
-var connection = null;
 
 
 //Exporting the database query functions
@@ -22,17 +20,16 @@ module.exports = {
 };
 
 //Initialize DB -> Called one time on server start
-//async.waterfall([]) executes all defined function in a row
+//async.waterfall([function(){],function(){},...) executes all defined function in a row
 //The connection variable must be given to the other functions with callback()
 function initDB(){
     async.waterfall([
         function (callback) {
-            r.connect(config.rethinkdb, function (err, conn) {
+            r.connect(config.rethinkdb, function (err, connection) {
                 if (err){
                     console.log('Failed to connect to the database');
                     //throw err;
                 }
-                connection = conn;
                 callback(null,connection);
             });
         },function (connection, callback) {
@@ -67,12 +64,11 @@ function initDB(){
 function insertTestData(){
     async.waterfall([
         function (callback) {
-            r.connect(config.rethinkdb, function (err, conn) {
+            r.connect(config.rethinkdb, function (err, connection) {
                 if (err){
                     console.log('Failed to connect to the database');
                     //throw err;
                 }
-                connection = conn;
                 callback(null,connection);
             });
         },function (connection, callback) {
@@ -93,19 +89,14 @@ function insertTestData(){
 
 
 
-
-
-
-
 //The code above is hard to understand at first sight
 //The code below is basically the same thing as the function initDB()
 //At the end of every function, the next function is automatically executed
 //The callback delivers specified values, which are needed for the next function
 
  function connectDB() {
-    r.connect(config.rethinkdb, function (err, conn) {
+    r.connect(config.rethinkdb, function (err, connection) {
         if (err) throw err;
-        connection = conn;
         createTable(connection);
     });
  }

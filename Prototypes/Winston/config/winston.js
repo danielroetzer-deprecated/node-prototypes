@@ -3,12 +3,12 @@
  */
 
 
-//Load Winston logger and initialize it
+//Load Winston logger
 //======================================================
 const winston = require('winston');
-winston.emitErrs = true;
 
-
+//Initialize our own logger, based on winston
+//======================================================
 const logger = new winston.Logger({
     transports: [
         new winston.transports.File({
@@ -35,8 +35,12 @@ const logger = new winston.Logger({
     ]
 });
 
+//Emit errors
+logger.emitErrs = true;
+
 //Exit after logging an uncaughtException (default=true)
 logger.exitOnError = true;
+
 
 
 module.exports = logger;
