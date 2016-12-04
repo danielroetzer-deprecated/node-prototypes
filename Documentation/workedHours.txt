@@ -1,5 +1,11 @@
 17.11.16, 5
 18.11.16, 2
 
-21.11.16, 5 --> Winston Prototyp 
+21.11.16, 5 --> Winston Prototyp hinzugefügt
 23.11.16, 5 --> Prototyp Dokumentation
+24.11.16, 4 --> Prototyp Dokumentation
+
+28.11.16, 2 --> Prototyp Dokumentation
+29.11.16, 2 --> Prototyp Dokumentation
+30.11.16, 3 --> Prototyp Dokumentation
+02.11.16, 3 --> Winston in Final Prototyp integrieren + Prototyp Dokumentation
