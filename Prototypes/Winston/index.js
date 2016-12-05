@@ -10,24 +10,36 @@ const logger = require('./config/winston');
 
 
 //Logging different sample messages
-logger.silly('Logging level = silly'); //Priority 5
-logger.debug('Logging level = debug'); //Priority 4
-logger.verbose('Logging level = verbose'); //Priority 3
+//======================================================
+logger.silly('Logging level = silly');
+logger.debug('Logging level = debug');
+logger.verbose('Logging level = verbose');
+logger.info('Logging level = info');
+logger.warn('Logging level = warn');
+logger.error('Logging level = error');
+
+
+
+//Same result as above, just different method
+logger.log('silly','Logging level = silly');
+logger.log('debug','Logging level = debug');
+logger.log('verbose','Logging level = verbose');
+logger.log('info','Logging level = info');
+logger.log('warn','Logging level = warn');
+logger.log('error','Logging level = error');
+
+/*
+//uncaughtException
+const y=2;
+y=4;
+*/
 
 //Log caughtException
 /*
-try {
-    const x=2;
-    x=4;
-}catch (err){
-    logger.error(err);
-}*/
+ try {
+ const x=2;
+ x=4;
+ }catch (err){
+ logger.error(err);
+ }*/
 
-logger.info('Logging level = info'); //Priority 2
-logger.warn('Logging level = warn'); //Priority 1
-logger.error('Logging level = error'); //Priority 0
-
-//Log uncaught Exception
-/*
-const y=2;
-y=4;*/
