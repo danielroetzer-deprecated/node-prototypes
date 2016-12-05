@@ -1,8 +1,8 @@
 /**
- * Created by Dani on 15.11.2016.
+ * Created by Rötzer on 05.12.2016.
  */
 
-var controller = require('./controller/controller');
+const controller = require('../controller/controller');
 
 //Defining routes and which function they execute from the controller
 module.exports = function (app) {
