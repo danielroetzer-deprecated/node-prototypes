@@ -6,11 +6,14 @@ const config = require('../config/config');
 //Load the async module
 const async = require('async');
 
-//Load the rethinkdb module
+//Load the RethinkDB module
 const r = require('rethinkdb');
 
+//Load logger
+const logger = require('../config/winston');
 
-//Exporting the database query functions
+
+//Export the database query functions
 module.exports = {
     initDB,
     insertData
@@ -24,46 +27,48 @@ function initDB(){
         function (callback) {
             r.connect(config.rethinkdb, function (err, conn) {
                 if (err){
-                    console.log('Failed to connect to the database');
+                    logger.log('error','Failed to connect to the database \n' + err);
+                }else{
+                    logger.log('verbose','Database connection successful');
                 }
                 callback(null,conn);
             });
         },function (connection, callback) {
             r.dbCreate('finalPrototype').run(connection, function(err, result){
                 if(err) {
-                    console.log("Database already created");
+                    logger.log('verbose','Database already created');
                 } else {
-                    console.log("Created new database: finalPrototype");
-                    console.log(JSON.stringify(result, null, 2));
+                    logger.log('verbose','Created new database: finalPrototype');
+                    logger.log('verbose',JSON.stringify(result, null, 2));
                 }
-
                 callback(null, connection);
             });
         },function (connection, callback) {
             r.db('finalPrototype').tableCreate('finalTable').run(connection, function(err, result) {
                 if (err) {
-                    console.log("Table already created");
+                    logger.log('verbose','Table already created');
                 }else{
-                    console.log("Created new table: finalPrototype");
-                    console.log(JSON.stringify(result, null, 2));
+                    logger.log('verbose','Created new table: finalTable');
+                    logger.log('verbose',JSON.stringify(result, null, 2));
                 }
-
-                callback(null,'###### Database is ready ######');
+                callback(null,'Database is ready');
             });
         }
     ],function (err, status) {
-        if (err) throw err;
-        else console.log(status);
+        if (err) logger.log('error',err);
+        else logger.log('info',status);
     });
 }
 
 function insertData(name,age){
+    logger.log('info','Inserting data into the database...');
     async.waterfall([
         function (callback) {
             r.connect(config.rethinkdb, function (err, conn) {
                 if (err){
-                    console.log('Failed to connect to the database');
-                    //throw err;
+                    logger.log('error','Failed to connect to the database \n' + err);
+                }else{
+                    logger.log('verbose','Database connection successful');
                 }
                 callback(null,conn);
             });
@@ -72,15 +77,19 @@ function insertData(name,age){
                 name: name,
                 age: age
             }).run(connection, function(err, result) {
-                if (err) throw err;
-                console.log(JSON.stringify(result, null, 2));
+                if (err) {
+                    logger.log('error',err);
+                }else{
+                    logger.log('verbose','Data successfully inserted');
+                    logger.log('verbose',JSON.stringify(result, null, 2));
+                }
             });
-            callback(null, '++ Data successfully added ++')
+            callback(null, 'Data successfully added')
         }
 
     ],function (err, status) {
-        if (err) throw err;
-        else console.log(status);
+        if (err) logger.log('error',err);
+        else logger.log('info',status);
     });
 }
 

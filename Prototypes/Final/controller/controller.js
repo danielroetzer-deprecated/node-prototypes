@@ -3,7 +3,7 @@
  */
 
 
-var db = require('../models/db');
+const db = require('../models/db');
 module.exports = {
     indexAction,
     storeAction

@@ -3,7 +3,7 @@
  */
 
 
-const controller = require('../controller/controller');
+const controller = require('../controllers/controller');
 
 //Defining routes and which function they execute from the controller
 module.exports = function (app) {

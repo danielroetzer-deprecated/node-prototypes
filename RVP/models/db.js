@@ -3,9 +3,9 @@
  */
 
 //Load the defined logger from the configs
-const logger = require('../config/winston');
+const logger = require('../configs/winston');
 
-const config = require('../config/config');
+const config = require('../configs/config');
 
 //Load the async module
 const async = require('async');
