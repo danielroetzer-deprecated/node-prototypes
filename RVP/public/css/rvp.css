@@ -30,3 +30,24 @@
     border-bottom: solid 2px #0f0f0f;
     outline: none;
 }
+
+/* #######
+    Fonts
+####### */
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto Medium';
+    src: url(../fonts/Roboto/Roboto-Medium.ttf);
+}
+
+body{
+    font-family: 'Roboto Regular', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Roboto Medium', sans-serif;
+}
