@@ -15,10 +15,6 @@ const config = require('./configs/config.js');
 const path = require('path');
 
 
-//Load serve-favicon module
-//======================================================
-//const favicon = require('serve-favicon');
-
 //Load and initialize express
 //======================================================
 const express = require('express');
@@ -41,8 +37,6 @@ logger.log('verbose','http logger loaded');
 //Some static files like css, favicon,... need to public for the user
 //======================================================
 app.use(express.static(path.join(__dirname + '/public')));
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-//logger.log('silly',path.join(__dirname, 'public', 'node-js_logo.png'));
 logger.log('verbose','public directory set');
 
 

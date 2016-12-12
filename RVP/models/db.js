@@ -10,7 +10,7 @@ const config = require('../configs/config');
 //Load the async module
 const async = require('async');
 
-//Load the rethinkdb module
+//Load the RethinkDB module
 const r = require('rethinkdb');
 
 
@@ -40,7 +40,7 @@ function initDB(){
                     logger.log('verbose','Database already created');
                 } else {
                     logger.log('verbose','Created new database: rvp');
-                    console.log(JSON.stringify(result, null, 2));
+                    logger.log('verbose',JSON.stringify(result, null, 2));
                 }
                 callback(null, connection);
             });
@@ -50,7 +50,7 @@ function initDB(){
                     logger.log('verbose','Table already created');
                 }else{
                     logger.log('verbose','Created new table: polls');
-                    console.log(JSON.stringify(result, null, 2));
+                    logger.log('verbose',JSON.stringify(result, null, 2));
                 }
 
                 callback(null,'Database is ready');
@@ -78,7 +78,7 @@ function insertData(name,age){/*
                 alter: age
             }).run(connection, function(err, result) {
                 if (err) throw err;
-                console.log(JSON.stringify(result, null, 2));
+                logger.log('verbose',JSON.stringify(result, null, 2));
             });
             callback(null, '++ Data successfully added ++')
         }
