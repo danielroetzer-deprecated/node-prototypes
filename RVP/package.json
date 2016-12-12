@@ -4,8 +4,9 @@
   "description": "Building a Real Time Voting App",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "test": "mocha tests/mocha.js",
+    "start": "node index.js",
+    "lint": "eslint **.js"
   },
   "repository": {
     "type": "git",
@@ -28,10 +29,16 @@
   "homepage": "https://github.com/danielroetzer/RVP-Repository#readme",
   "dependencies": {
     "async": "^2.1.2",
+    "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "morgan": "^1.7.0",
     "pug": "^2.0.0-beta6",
     "rethinkdb": "^2.3.3",
+    "serve-favicon": "^2.3.2",
     "winston": "^2.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.12.0",
+    "mocha": "^3.2.0"
   }
 }
