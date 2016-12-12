@@ -22,7 +22,6 @@ logger.log('info','configuring express...');
 //Load and initialize the body parser module
 //======================================================
 const bodyParser = require('body-parser');
-app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 
@@ -38,7 +37,7 @@ app.use(morgan('combined', {stream:accessLogStream}));
 logger.log('verbose','http logger loaded');
 
 
-//Load pug
+//Set view engine to pug
 //======================================================
 app.set('view engine', 'pug');
 logger.log('verbose','view engine set to pug');

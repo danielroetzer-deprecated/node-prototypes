@@ -10,3 +10,15 @@
 {"level":"info","message":"Database is ready","timestamp":"2016-12-05T09:26:09.094Z"}
 {"level":"info","message":"Inserting data into the database...","timestamp":"2016-12-05T09:27:16.085Z"}
 {"level":"info","message":"Data successfully added","timestamp":"2016-12-05T09:27:16.137Z"}
+{"level":"info","message":"configuring express...","timestamp":"2016-12-12T08:23:51.806Z"}
+{"level":"info","message":"loading database setup...","timestamp":"2016-12-12T08:23:53.712Z"}
+{"level":"info","message":"express configured","timestamp":"2016-12-12T08:23:53.712Z"}
+{"level":"info","message":"listening on port: 3000","timestamp":"2016-12-12T08:23:53.712Z"}
+{"level":"error","message":"Failed to connect to the database \nReqlDriverError: Could not connect to localhost:28015.\nconnect ECONNREFUSED 127.0.0.1:28015","timestamp":"2016-12-12T08:23:54.759Z"}
+{"level":"info","message":"configuring express...","timestamp":"2016-12-12T08:25:44.617Z"}
+{"level":"info","message":"loading database setup...","timestamp":"2016-12-12T08:25:44.789Z"}
+{"level":"info","message":"express configured","timestamp":"2016-12-12T08:25:44.789Z"}
+{"level":"info","message":"listening on port: 3000","timestamp":"2016-12-12T08:25:44.789Z"}
+{"level":"info","message":"Database is ready","timestamp":"2016-12-12T08:25:45.586Z"}
+{"level":"info","message":"Inserting data into the database...","timestamp":"2016-12-12T08:33:09.968Z"}
+{"level":"info","message":"Data successfully added","timestamp":"2016-12-12T08:33:10.013Z"}

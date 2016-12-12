@@ -6,14 +6,14 @@ const config = require('../config/config');
 //Load the async module
 const async = require('async');
 
-//Load the rethinkdb module
+//Load the RethinkDB module
 const r = require('rethinkdb');
 
 //Load logger
 const logger = require('../config/winston');
 
 
-//Exporting the database query functions
+//Export the database query functions
 module.exports = {
     initDB,
     insertData
