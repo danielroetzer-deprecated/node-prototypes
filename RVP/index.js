@@ -10,7 +10,14 @@ const logger = require('./configs/winston');
 //======================================================
 const config = require('./configs/config.js');
 
+//Load path module
+//======================================================
+const path = require('path');
 
+
+//Load serve-favicon module
+//======================================================
+//const favicon = require('serve-favicon');
 
 //Load and initialize express
 //======================================================
@@ -33,7 +40,9 @@ logger.log('verbose','http logger loaded');
 
 //Some static files like css, favicon,... need to public for the user
 //======================================================
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname + '/public')));
+//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+//logger.log('silly',path.join(__dirname, 'public', 'node-js_logo.png'));
 logger.log('verbose','public directory set');
 
 
@@ -43,7 +52,7 @@ app.set('view engine', 'pug');
 logger.log('verbose','view engine set to pug');
 
 
-//Load the router
+//Load the routes
 //======================================================
 require('./routes/routes')(app);
 logger.log('verbose','routing paths set');
