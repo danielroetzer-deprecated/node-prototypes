@@ -4,11 +4,11 @@
 
 //Load the defined logger from the configs
 //======================================================
-const logger = require('./config/winston');
+const logger = require('./configs/winston');
 
 //Load config
 //======================================================
-const config = require('./config/config.js');
+const config = require('./configs/config.js');
 
 
 
@@ -30,7 +30,9 @@ app.use(morgan('combined', {stream:accessLogStream}));
 logger.log('verbose','http logger loaded');
 
 
-//Set the static files like css public
+
+//Some static files like css, favicon,... need to public for the user
+//======================================================
 app.use(express.static(__dirname + '/public'));
 logger.log('verbose','public directory set');
 
@@ -46,6 +48,12 @@ logger.log('verbose','view engine set to pug');
 require('./routes/routes')(app);
 logger.log('verbose','routing paths set');
 
+
+//Load and initialize the body parser module
+//======================================================
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 
 
 //Listener
