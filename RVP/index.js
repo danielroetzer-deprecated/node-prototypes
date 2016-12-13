@@ -2,6 +2,8 @@
  * Created by Rötzer on 16.11.2016.
  */
 
+'use strict';
+
 //Load the defined logger from the configs
 //======================================================
 const logger = require('./configs/winston');
