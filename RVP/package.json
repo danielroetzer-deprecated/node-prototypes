@@ -20,8 +20,8 @@
     "Winston",
     "Morgan"
   ],
-  "author": "Daniel Roetzer",
-  "license": "ISC",
+  "author": "Daniel Rötzer",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/danielroetzer/RVP-Repository/issues"
   },
