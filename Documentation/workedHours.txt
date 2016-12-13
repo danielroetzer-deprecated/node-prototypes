@@ -9,3 +9,5 @@
 29.11.16, 2 --> Prototyp Dokumentation
 30.11.16, 3 --> Prototyp Dokumentation
 02.11.16, 3 --> Winston in Final Prototyp integrieren + Prototyp Dokumentation
+
+12.12.16, 2,5 --> ESLint, NPM Scripts, Gulp vs Grunt
