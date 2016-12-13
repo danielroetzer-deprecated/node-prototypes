@@ -1,1 +1,0 @@
-console.log('myModule called');
