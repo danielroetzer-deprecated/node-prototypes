@@ -9,17 +9,25 @@
         "sourceType": "module"
     },
     "rules": {
+		"indent": [
+            "warn",
+            4
+        ],
         "linebreak-style": [
             "error",
             "windows"
         ],
         "quotes": [
-            "error",
+            "warn",
             "single"
         ],
         "semi": [
             "error",
             "always"
         ]
+    },
+    "globals": {
+        "describe": false,
+        "it": false
     }
 }

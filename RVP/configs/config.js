@@ -11,7 +11,7 @@ module.exports = {
         db: 'rethinkdb_ex'
     },
     server: {
-        host: "localhost",
+        host: 'localhost',
         port: 3000
     }
 };
