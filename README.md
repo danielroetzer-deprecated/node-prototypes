@@ -2,7 +2,7 @@
   <a href="">
     <img src="node-logo.png">
   </a>
-  <p align="center">**Node.js**</p>
+  <p align="center"><strong>Node.js</strong></p>
 </p>
 
 # node-prototypes
