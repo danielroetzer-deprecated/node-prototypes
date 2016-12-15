@@ -1,10 +1,8 @@
-<p align="center">
-  <a href="">
-    <img src="https://github.com/danielroetzer/node-prototypes/blob/master/node-logo.png?raw=true">
-  </a>
-  <p align="center"><strong>Node.js</strong></p>
-</p>
-
-
 # node-prototypes
-Testing different node.js functions in several prototypes
+Testing different node.js functions and modules in several prototypes
+
+## All Prototypes
+- **HelloWorld** - Displaying a simple "Hello World!" message in the browser.
+- **Modules** - Testing the module export method to create own modules and understand the usability behind this system.
+- **BodyParser** - Converts html data from a formular to JavaScript objects, so we can work with the data on the server.
+- Morgan
