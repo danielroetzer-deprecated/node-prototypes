@@ -14,4 +14,4 @@ Testing different node.js functions and modules in several prototypes
 
 
 ##Used language
-Code is written and commented in german
+Code is written and commented in english
